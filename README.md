@@ -1,89 +1,94 @@
-# cpp-dsa-implementation
+# cpp-sys-toolkit
 
-A C++ implementation of fundamental data structures and graph traversal algorithms for learning and interview preparation.
+A modular C++ systems programming toolkit implementing core components of caching, concurrency, and memory management.
 
 ---
 
 ## Overview
 
-This project implements core data structures from scratch using C++:
+This project demonstrates fundamental system-level components used in backend systems, OS concepts, and performance-critical applications.
 
-- Stack (Array-based)
-- Queue (Circular Queue)
-- Linked List (Singly Linked List)
-- Binary Search Tree (BST)
-- Graph Traversal (DFS / BFS)
+Focus: **low-level design, performance, and concurrency in modern C++**.
 
 ---
 
-## Project Structure
+## Components
 
-```
-cpp-data-structure/
-├── main.cpp
-├── stack/
-├── queue/
-├── linked_list/
-├── bst/
-├── graph_traversal/
-└── tests/
-```
+### 1. LRU Cache (O(1))
+- Hash map + doubly linked list
+- O(1) get / put operations
+- LRU eviction policy
 
----
+### 2. Thread Pool
+- Fixed-size worker threads
+- Task queue (mutex + condition_variable)
+- Concurrent task execution
 
-## Data Structures
-
-### Stack
-- push / pop / peek
-- isEmpty / isFull
-- O(1) operations
-
-### Queue (Circular)
-- enqueue / dequeue
-- front / rear
-- efficient space usage with modulo indexing
-
-### Linked List
-- insertFront / insertBack
-- deleteValue / search
-- dynamic memory with pointers
-
-### Binary Search Tree (BST)
-- insert / search
-- inorder / preorder / postorder traversal
-- average O(log n)
-
-### Graph Traversal
-- DFS (recursion)
-- BFS (queue)
-- adjacency list representation
+### 3. Memory Pool Allocator
+- Preallocated memory blocks
+- Free list management
+- O(1) allocate / deallocate
+- Reduced fragmentation
 
 ---
 
-## Complexity Summary
+## Architecture
 
-| Structure | Operation | Complexity |
-|----------|----------|------------|
-| Stack | push/pop | O(1) |
-| Queue | enqueue/dequeue | O(1) |
-| Linked List | insert/delete | O(n) |
-| BST | search/insert | O(log n) avg |
-| Graph | DFS/BFS | O(V + E) |
+LRU Cache → Thread Pool → Memory Pool
+
+Each module is independent and reusable.
 
 ---
 
-## How to Run
+## Build
 
 ```bash
-g++ main.cpp graph_traversal/dfs_bfs.cpp bst/bst.cpp stack/stack.cpp queue/queue.cpp linked_list/linked_list.cpp -o main
-./main
+cmake ..
+mingw32-make
 ```
 
 ---
 
-## Goal
+## Run Examples
 
-- Strengthen C++ fundamentals
-- Practice pointer and memory management
-- Prepare for CS interviews and internships
+```bash
+./lru_example
+./thread_example
+./memory_example
+```
+
+---
+
+## Key Concepts
+
+- Data structures (LRU Cache)
+- Concurrency (Thread Pool)
+- Memory management (Memory Pool)
+- RAII and resource safety
+- Modular CMake project design
+
+---
+
+## Why this matters
+
+Shows ability to:
+- Design system-level components
+- Handle multithreading safely
+- Manage memory manually
+- Structure scalable C++ projects
+
+---
+
+## Future Work
+
+- Lock-free queue
+- Object pool allocator
+- Benchmark suite
+- Linux epoll server
+
+---
+
+##  Author
+
+C++ systems programming practice project for backend / embedded / IC preparation.
 
