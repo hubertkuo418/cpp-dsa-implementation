@@ -4,7 +4,7 @@
 
 ---
 
-## 🚀 Overview
+## Overview
 
 cpp-sys-toolkit is a systems programming project that implements fundamental backend components using modern C++.
 
@@ -18,19 +18,19 @@ The goal is to demonstrate **how core system components are built from scratch**
 
 ---
 
-## ✨ Features
+## Features
 
-### ⚡ LRU Cache (O(1))
+### LRU Cache (O(1))
 - Hash map + doubly linked list design
 - O(1) get / put operations
 - LRU eviction strategy
 
-### 🧵 Thread Pool
+### Thread Pool
 - Fixed-size worker threads
 - Task queue with mutex + condition_variable
 - Concurrent task execution
 
-### 🧠 Memory Pool Allocator
+### Memory Pool Allocator
 - Preallocated memory blocks
 - Free list management
 - O(1) allocation / deallocation
@@ -38,7 +38,7 @@ The goal is to demonstrate **how core system components are built from scratch**
 
 ---
 
-## 🧠 System Design
+## System Design
 
 ```
 LRU Cache
@@ -55,7 +55,7 @@ Each module is:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 cpp-sys-toolkit/
@@ -76,7 +76,7 @@ cpp-sys-toolkit/
 
 ---
 
-## ⚙️ Build
+## Build
 
 ```bash
 mkdir build
@@ -87,7 +87,7 @@ mingw32-make
 
 ---
 
-## ▶️ Run Examples
+##  Run Examples
 
 ```bash
 ./lru_example
@@ -97,7 +97,7 @@ mingw32-make
 
 ---
 
-## 🧩 Key Concepts
+## Key Concepts
 
 - Data structures (LRU Cache design)
 - Multithreading (Thread Pool)
@@ -108,7 +108,7 @@ mingw32-make
 
 ---
 
-## 🔮 Future Work
+## Future Work
 
 - Lock-free queue implementation
 - Object pool allocator
@@ -118,7 +118,7 @@ mingw32-make
 
 ---
 
-## 👤 Author
+## Author
 
 Built by: Hubert Kuo  
 Focus: Computer Vision / AI Systems / Machine Learning
