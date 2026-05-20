@@ -1,55 +1,93 @@
 # cpp-sys-toolkit
 
-A modular C++ systems programming toolkit implementing core components of caching, concurrency, and memory management.
+> A modular C++ systems programming toolkit for studying core backend and OS-level concepts.
 
 ---
 
-## Overview
+## 🚀 Overview
 
-This project demonstrates fundamental system-level components used in backend systems, OS concepts, and performance-critical applications.
+cpp-sys-toolkit is a systems programming project that implements fundamental backend components using modern C++.
 
-Focus: **low-level design, performance, and concurrency in modern C++**.
+It focuses on:
+- Performance-critical design
+- Concurrency handling
+- Memory management
+- Low-level system architecture
+
+The goal is to demonstrate **how core system components are built from scratch**, not just used.
 
 ---
 
-## Components
+## ✨ Features
 
-### 1. LRU Cache (O(1))
-- Hash map + doubly linked list
+### ⚡ LRU Cache (O(1))
+- Hash map + doubly linked list design
 - O(1) get / put operations
-- LRU eviction policy
+- LRU eviction strategy
 
-### 2. Thread Pool
+### 🧵 Thread Pool
 - Fixed-size worker threads
-- Task queue (mutex + condition_variable)
+- Task queue with mutex + condition_variable
 - Concurrent task execution
 
-### 3. Memory Pool Allocator
+### 🧠 Memory Pool Allocator
 - Preallocated memory blocks
 - Free list management
-- O(1) allocate / deallocate
-- Reduced fragmentation
+- O(1) allocation / deallocation
+- Reduced memory fragmentation
 
 ---
 
-## Architecture
+## 🧠 System Design
 
-LRU Cache → Thread Pool → Memory Pool
+```
+LRU Cache
+   ↓
+Thread Pool
+   ↓
+Memory Pool Allocator
+```
 
-Each module is independent and reusable.
+Each module is:
+- Independent
+- Reusable
+- Designed for system-level scalability
 
 ---
 
-## Build
+## 📁 Project Structure
+
+```
+cpp-sys-toolkit/
+│
+├── CMakeLists.txt
+├── README.md
+│
+├── include/
+├── src/
+│
+├── examples/
+│   ├── lru_example.cpp
+│   ├── thread_example.cpp
+│   └── memory_example.cpp
+│
+└── build/
+```
+
+---
+
+## ⚙️ Build
 
 ```bash
+mkdir build
+cd build
 cmake ..
 mingw32-make
 ```
 
 ---
 
-## Run Examples
+## ▶️ Run Examples
 
 ```bash
 ./lru_example
@@ -59,36 +97,28 @@ mingw32-make
 
 ---
 
-## Key Concepts
+## 🧩 Key Concepts
 
-- Data structures (LRU Cache)
-- Concurrency (Thread Pool)
-- Memory management (Memory Pool)
+- Data structures (LRU Cache design)
+- Multithreading (Thread Pool)
+- Memory management (Custom allocator)
 - RAII and resource safety
-- Modular CMake project design
+- Low-level system design in C++
+- Modular architecture with CMake
 
 ---
 
-## Why this matters
+## 🔮 Future Work
 
-Shows ability to:
-- Design system-level components
-- Handle multithreading safely
-- Manage memory manually
-- Structure scalable C++ projects
-
----
-
-## Future Work
-
-- Lock-free queue
+- Lock-free queue implementation
 - Object pool allocator
-- Benchmark suite
-- Linux epoll server
+- Benchmark suite (performance comparison)
+- Linux epoll-based network server
+- Memory profiling tools
 
 ---
 
-##  Author
+## 👤 Author
 
-C++ systems programming practice project for backend / embedded / IC preparation.
-
+Built by: Hubert Kuo  
+Focus: Computer Vision / AI Systems / Machine Learning
